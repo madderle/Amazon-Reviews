@@ -8,8 +8,9 @@ RUN adduser -D -S -h /home/ds -s /bin/ash ds
 
 #install neccessary packages
 RUN pip install jupyterlab nltk boto3
-RUN conda install spacy
-RUN pip install spacy
+RUN conda update conda
+RUN conda install spacy -y
+
 RUN python -m spacy download 'en'
 RUN python -m nltk.downloader -d /usr/local/share/nltk_data all
 
