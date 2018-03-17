@@ -11,7 +11,6 @@ RUN pip install jupyterlab boto3
 RUN conda update conda
 RUN conda install nltk
 RUN conda install spacy -y
-
 RUN python -m spacy download 'en'
 RUN python -m nltk.downloader -d /usr/local/share/nltk_data all
 
