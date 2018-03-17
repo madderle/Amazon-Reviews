@@ -7,8 +7,9 @@ RUN apt-get update
 RUN adduser -D -S -h /home/ds -s /bin/ash ds
 
 #install neccessary packages
-RUN pip install jupyterlab nltk boto3
+RUN pip install jupyterlab boto3
 RUN conda update conda
+RUN conda install nltk
 RUN conda install spacy -y
 
 RUN python -m spacy download 'en'
