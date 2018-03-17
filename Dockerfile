@@ -22,4 +22,4 @@ WORKDIR /home/ds
 
 
 #Startup the Jupyter notebook when this runs.
-CMD jupyter lab --no-browser --port 7788 --ip='*' --allow-root
+CMD jupyter lab --no-browser --port 7788 --ip='*' --allow-root --NotebookApp.iopub_data_rate_limit=10000000
